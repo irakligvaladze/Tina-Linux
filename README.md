@@ -21,7 +21,7 @@ cd Tina-Linux
 git submodule update --init --recursive
 
 # Download required build dependencies
-RELEASE_URL="https://github.com/irakligvaladze/Tina-Linux/releases/tag/dependencies-v1"
+RELEASE_URL="https://github.com/irakligvaladze/Tina-Linux/releases/download/dependencies-v1"
 
 # Prebuilt files
 wget -c "$RELEASE_URL/prebuilt.tar.gz"
