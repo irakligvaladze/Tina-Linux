@@ -1,8 +1,14 @@
 # Tina-Linux
 
-Tina-Linux for T113/D1-H/D1s
+Tina-Linux for T113/D1-H/D1s.
 
-### Ubuntu environment
+## Tested environment
+
+This SDK has been tested on:
+
+- **Ubuntu 20.04 LTS**
+
+### Install build dependencies
 
 ```sh
 sudo apt-get install build-essential subversion git-core libncurses5-dev \
@@ -11,7 +17,7 @@ mercurial bzr ecj cvs unzip lib32z1 lib32z1-dev lib32stdc++6 \
 libstdc++6 libmpc-dev libgmp-dev -y
 ```
 
-### SDK download from GitHub
+## Clone the SDK
 
 ```sh
 git clone --recursive https://github.com/irakligvaladze/Tina-Linux.git
@@ -19,8 +25,11 @@ cd Tina-Linux
 
 # If you didn't clone with --recursive
 git submodule update --init --recursive
+```
 
-# Download required build dependencies
+## Download build dependencies
+
+```sh
 RELEASE_URL="https://github.com/irakligvaladze/Tina-Linux/releases/download/dependencies-v1"
 
 # Prebuilt files
@@ -50,7 +59,7 @@ wget -c \
 rm -f prebuilt.tar.gz dl.tar dl.tar.part-*
 ```
 
-### Compile
+## Compile
 
 ```sh
 source build/envsetup.sh
@@ -81,11 +90,22 @@ pack
 Tina-Linux/out/d1-mq_pro/tina_d1-mq_pro_uart0.img
 ```
 
-### Flash to TF-Card
+## Flash to TF-Card
 
-Use PhoenixCard to flash the generated image.
+Download **PhoenixCard** from the release assets:
 
-More information:
+https://github.com/irakligvaladze/Tina-Linux/releases/tag/dependencies-v1
 
-* PhoenixCard: https://mangopi.cc/_media/phoenixcard4.2.8.zip
-* MangoPi documentation: https://mangopi.cc/d1
+Flash the generated image (`*.img`) to the TF/SD card using PhoenixCard.
+
+## Documentation
+
+The following reference documents are included in the release assets:
+
+- **F133_datasheet.pdf**
+- **f133_user_manual_v1.0.pdf**
+- **phoenixcard4.2.8.zip**
+
+Release assets:
+
+https://github.com/irakligvaladze/Tina-Linux/releases/tag/dependencies-v1
